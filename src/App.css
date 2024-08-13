@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+html {
+
+  overflow-x: hidden;
+  overflow-y:hidden;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  width: 100vh;
+  height: 100vh;
+  transition: ease-out 0.5s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(233, 233, 233);
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.bg{
+  position: absolute;
+  z-index: 0;
+  transition: ease-out 0.5s;
+}
+
+.bg.test{
+  background-image: url(assets/ciphercollector.png);
+  border-radius: 100vh;
+  width: 100vh;
+  height: 100vh;
+}
+
+
+.projectcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8vh;
+}
+
+.project {
+  transform: skew(-20deg);
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  width: 40vh;
+  height: 10vh;
+  color: white;
+  text-wrap: wrap;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: ease-in-out 0.1s;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2px;
+  font-size: x-large;
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width:1440px) {
+  .projectcontainer .project:nth-child(2) {
+    align-self: flex-end;
+    margin-right: -500px;
+  }
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.projectimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 60%;
+  padding-right: 75%;
+  opacity: 50%;
+  width: 80%;
+  height: 80%;
+}
+
+.projecttxt{
+  display: flex;
+  flex-direction: row;
+  text-wrap: wrap;
+  gap: 5%;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project>* {
+  transform: skew(20deg);
+  position: absolute;
+
+}
+
+.project:hover {
+  background-color:slategray;
 }
