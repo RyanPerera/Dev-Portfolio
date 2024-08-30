@@ -92,14 +92,16 @@ function App() {
   return (
     <div class='app'>
       <Header />
-      <div class='bg'>
-        <StyledBg mx={mouseX} my={mouseY} bg={bg} />
-        <StyledBgOver mx={mouseX} my={mouseY} bg={bg} />
-        <StyledCard mx={mouseX} my={mouseY} bg={bg}>
-          <Box sx={{ width: 350 }}>
-            <Card variant="outlined">{card}</Card>
-          </Box>
-        </StyledCard>
+      <div class='js-only'>
+        <div class='bg'>
+          <StyledBg mx={mouseX} my={mouseY} bg={bg} />
+          <StyledBgOver mx={mouseX} my={mouseY} bg={bg} />
+          <StyledCard mx={mouseX} my={mouseY} bg={bg}>
+            <Box sx={{ width: 350 }}>
+              <Card variant="outlined">{card}</Card>
+            </Box>
+          </StyledCard>
+        </div>
       </div>
       <div class='home'>
         <div class='projectcontainer'>
